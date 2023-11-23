@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apontamento de horas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: url('fundo.png') no-repeat;
+            text-align: center;
+            color: #fff;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1em;
+            border-radius: 10px;
+        }                
+        button{
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+	    color: #333;
+   	    font-size: 14px;
+            cursor: pointer;
+	    width:20%;
+	    height: 45px;
+        }
+	
+	input{
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+	    color: #333;
+   	    font-size: 14px;
+            cursor: pointer;
+	    width:20%;
+	    height: 45px;
+        }      
+
+    </style>
+</head>
+<body>
+     <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Only Supply Sports</title>
+</head>
+<body>
+    <section>        
+        <header>
+            <img src="onlyLogo.png" alt="" class="logo"></a>
+            <nav class="navegation">
+                <ul>
+                    <li><a href="SiteOnlySupply.html">Home</a></li>
+                    <li><a href="DemonstrativoDeFerias.html">Demonstrativo de férias</a></li>
+                    <li><a href="ApontamentoHoras.html">Apontamento de horas</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+        <h1>Apontamento de Horas</h1><br><br>
+        <form>
+            <label>
+                <span>Id Funcionário:</span>
+                <input type="text" placeholder="Digite seu Id" name="NomeFuncionario">
+            </label><br><br>
+
+            <span>Hora de Entrada:</span>
+            <select name="hora_entrada">
+                <script>
+                    for (let i = 0; i <= 23; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            :
+            <select name="minuto_entrada">
+                <script>
+                    for (let i = 0; i <= 59; i++) {
+                        document.write(`<option value="${i < 10 ? '0' + i : i}">${i < 10 ? '0' + i : i}</option>`);
+                    }
+                </script>
+            </select>
+
+            <br><br>
+            <span>Hora de Saída:</span>
+            <select name="hora_saida">
+                <script>
+                    for (let i = 0; i <= 23; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            :
+            <select name="minuto_saida">
+                <script>
+                    for (let i = 0; i <= 59; i++) {
+                        document.write(`<option value="${i < 10 ? '0' + i : i}">${i < 10 ? '0' + i : i}</option>`);
+                    }
+                </script>
+            </select>
+
+            <br><br>
+            <button type="button" onclick="registrarPonto()">Apontar</button>
+		
+        </form><br>
+    </div>
+
+    <script>
+        function registrarPonto() {
+            // Obtenha os dados do formulário aqui
+            var nomeFuncionario = document.querySelector('input[name="NomeFuncionario"]').value;
+            var horaEntrada = document.querySelector('select[name="hora_entrada"]').value;
+            var minutoEntrada = document.querySelector('select[name="minuto_entrada"]').value;
+            var horaSaida = document.querySelector('select[name="hora_saida"]').value;
+            var minutoSaida = document.querySelector('select[name="minuto_saida"]').value;
+	    
+
+
+            // Exiba um alerta com os dados
+            
+ if(nomeFuncionario == 1)
+        {
+var mensagem = `Registro de ponto:\n\nNome: José Ferreira Silva\nEntrada: ${horaEntrada}:${minutoEntrada}\nSaída: ${horaSaida}:${minutoSaida}`;
+            alert(mensagem);
+}
+else if(nomeFuncionario == 2)
+{
+var mensagem = `Registro de ponto:\n\nNome: Maria Mendes\nEntrada: ${horaEntrada}:${minutoEntrada}\nSaída: ${horaSaida}:${minutoSaida}`;
+            alert(mensagem);
+}    
+else if(nomeFuncionario != 1 & nomeFuncionario != 2)
+{
+var mensagem = `Insira um Id válido`;
+            alert(mensagem);
+}    
+        }
+    </script>   
+              
+    </section>
+</body>
+</html>
+</body>
+</html>
